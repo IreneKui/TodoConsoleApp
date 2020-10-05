@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 class TodoManager
 {
-    List<Todo> ListOfTodoItems = new List<Todo>();
+   public List<Todo> ListOfTodoItems = new List<Todo>();
     public void AddTodoItem(string item)
     {   
         Todo newTodoItem = new Todo(item);  //Sends to constructor
