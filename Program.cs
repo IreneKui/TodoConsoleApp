@@ -16,8 +16,8 @@ namespace TodoApp
             todoManager.AddTodoItem("Rasta den andra hunden");
             todoManager.AddTodoItem("Rasta papegojan");
 
-            WriteListToConsole(todoManager.ListTodoItems());
-            todoManager.ListOfTodoItems[1].CompleteTodo();
+            // WriteListToConsole(todoManager.ListTodoItems());
+            //todoManager.ListOfTodoItems[1].CompleteTodo();
             WriteListToConsole(todoManager.ListTodoItems());
 
             // todoManager.SetTodoItem(0, true);
@@ -28,7 +28,7 @@ namespace TodoApp
             // foreach (string toWrite in listString )
             for (int i = 0; i < listString.Count; i++)
             {
-                Console.WriteLine(listString[i]);
+                Console.WriteLine((i+1) + " " + listString[i]);
             }
         }
     }

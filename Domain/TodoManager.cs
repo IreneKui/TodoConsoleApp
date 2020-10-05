@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 class TodoManager
 {
-   public List<Todo> ListOfTodoItems = new List<Todo>();
+   List<Todo> ListOfTodoItems = new List<Todo>();
     public void AddTodoItem(string item)
     {   
         Todo newTodoItem = new Todo(item);  //Sends to constructor
@@ -17,4 +17,12 @@ class TodoManager
         }
         return returnList;
     } 
+    public void RemoveTodoIitem(int indexToRemove)
+    {
+        ListOfTodoItems.RemoveAt(indexToRemove-1);
+    }
+    public void CompleteTodo(int indexComplete)
+    {
+        ListOfTodoItems[indexComplete].CompleteTodo();
+    }
 }
