@@ -19,7 +19,12 @@ namespace TodoApp
             // WriteListToConsole(todoManager.ListTodoItems());
             //todoManager.ListOfTodoItems[1].CompleteTodo();
             WriteListToConsole(todoManager.ListTodoItems());
-
+            Console.WriteLine("Vilken Todo är du klar med?");
+            todoManager.CompleteTodo(Convert.ToInt32(Console.ReadLine()));
+            
+            Console.WriteLine("Vilken Todo vill du ta bort?");
+            todoManager.RemoveTodoIitem(Convert.ToInt32(Console.ReadLine()));
+            WriteListToConsole(todoManager.ListTodoItems());
             // todoManager.SetTodoItem(0, true);
             // todoManager.RemoveTodoItem(1);
         }

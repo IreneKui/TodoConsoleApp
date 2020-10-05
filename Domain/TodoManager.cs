@@ -23,6 +23,6 @@ class TodoManager
     }
     public void CompleteTodo(int indexComplete)
     {
-        ListOfTodoItems[indexComplete].CompleteTodo();
+        ListOfTodoItems[indexComplete-1].CompleteTodo();
     }
 }
