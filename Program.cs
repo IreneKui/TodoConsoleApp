@@ -7,20 +7,18 @@ namespace TodoApp
     {
         static void Main()
         {
+            TodoManager todoManager = new TodoManager();
             while(true)
             {
-            // Console.Clear();
+            Console.Clear();
             Console.WriteLine("-------Min Todo-App--------");
             Console.WriteLine("--Välj vad du vill göra genom att välja bokstav--");
             Console.WriteLine("[L]ägga till Todo");
-            Console.WriteLine("[V]ad har jag att göra i Todo-lista");
+            Console.WriteLine("[V]ad har jag att göra i Todo-lista?");
             Console.WriteLine("[M]arkera Todo som klar");
             Console.WriteLine("[T]a bort en Todo");
             Console.WriteLine("[A]vsluta Todo");
             Console.WriteLine("---------------------------");
-
-            
-            TodoManager todoManager = new TodoManager();
 
             string input = Console.ReadLine().ToUpper();
             switch (input)
@@ -35,10 +33,13 @@ namespace TodoApp
                     todoManager.AddTodoItem("Rasta papegojan");
                     
                     WriteListToConsole(todoManager.ListTodoItems());
+                    Console.ReadLine();
                     break;
 
                 case "V":
                     WriteListToConsole(todoManager.ListTodoItems());
+                    Console.WriteLine("Tryck enter");
+                    Console.ReadLine();
                     break;
                     
                 case "M":
